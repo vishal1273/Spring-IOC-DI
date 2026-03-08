@@ -32,4 +32,9 @@
         <constructor-arg ref="engine"/>
     </bean>
 
+    <bean id="a" class="com.vishal.ioc.model.A" depends-on="b"/>
+    <bean id="b" class="com.vishal.ioc.model.B" depends-on="c"/>
+    <bean id="c" class="com.vishal.ioc.model.C"/>
+
+
 </beans>
