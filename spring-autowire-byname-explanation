@@ -1,0 +1,9 @@
+💡 Explanation (useful for interview):
+
+autowire="byName" injects dependency based on property name
+
+Property name in Car → engine
+
+Spring searches bean with id engine
+
+engine2 will not be injected
