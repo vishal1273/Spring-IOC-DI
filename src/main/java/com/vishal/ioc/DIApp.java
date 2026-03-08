@@ -9,7 +9,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class DIApp {
     public static void main(String[] args) {
         ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
-        Car car = (Car) context.getBean("car");
+        final Car car = (Car) context.getBean("car");
         System.out.println(car);
     }
 }

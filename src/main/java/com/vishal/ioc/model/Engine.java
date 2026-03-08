@@ -3,11 +3,8 @@ package com.vishal.ioc.model;
 public class Engine {
     private String modelYear;
 
-    public Engine(String modelYear) {
+    public void setModelYear(String modelYear) {
         this.modelYear = modelYear;
-    }
-
-    public Engine() {
     }
 
     @Override

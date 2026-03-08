@@ -23,18 +23,18 @@
      </bean>-->
 
     <bean id="engine" class="com.vishal.ioc.model.Engine">
-        <constructor-arg value="2026"/>
+        <property name="modelYear" value="2026"/>
     </bean>
 
-    <bean id="car" class="com.vishal.ioc.model.Car">
+    <bean id="car" class="com.vishal.ioc.model.Car" autowire="byType">
         <property name="carName" value="Tata Punch"/>
-     <!--   <property name="engine" ref="engine"/>-->
-        <constructor-arg ref="engine"/>
     </bean>
 
-    <bean id="a" class="com.vishal.ioc.model.A" depends-on="b"/>
-    <bean id="b" class="com.vishal.ioc.model.B" depends-on="c"/>
-    <bean id="c" class="com.vishal.ioc.model.C"/>
+    <!--
+        <bean id="a" class="com.vishal.ioc.model.A" depends-on="b"/>
+        <bean id="b" class="com.vishal.ioc.model.B" depends-on="c"/>
+        <bean id="c" class="com.vishal.ioc.model.C"/>
+    -->
 
 
 </beans>
