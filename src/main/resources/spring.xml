@@ -22,15 +22,15 @@
          </property>
      </bean>-->
 
-    <bean id="engine1" class="com.vishal.ioc.model.Engine">
+    <bean id="engine" class="com.vishal.ioc.model.Engine">
         <property name="modelYear" value="2021"/>
     </bean>
 
-    <bean id="engine2" class="com.vishal.ioc.model.Engine" autowire-candidate="false">
+    <bean id="engine2" class="com.vishal.ioc.model.Engine">
         <property name="modelYear" value="2026"/>
     </bean>
 
-    <bean id="car" class="com.vishal.ioc.model.Car" autowire="byType">
+    <bean id="car" class="com.vishal.ioc.model.Car" autowire="byName">
         <property name="carName" value="Tata Punch"/>
     </bean>
 
