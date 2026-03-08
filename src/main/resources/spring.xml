@@ -22,7 +22,7 @@
              <util:properties location="db.properties"/>
          </property>
      </bean>-->
-    <context:annotation-config/>
+   <!-- <context:annotation-config/>
     <bean id="engine" class="com.vishal.ioc.model.Engine">
         <property name="modelYear" value="2021"/>
     </bean>
@@ -33,13 +33,16 @@
 
     <bean id="car" class="com.vishal.ioc.model.Car">
         <property name="carName" value="Tata Punch"/>
-    </bean>
+    </bean>-->
 
     <!--
         <bean id="a" class="com.vishal.ioc.model.A" depends-on="b"/>
         <bean id="b" class="com.vishal.ioc.model.B" depends-on="c"/>
         <bean id="c" class="com.vishal.ioc.model.C"/>
     -->
-
+<bean  id="emp" class="com.vishal.ioc.model.Employee" init-method="init" destroy-method="destroy">
+    <constructor-arg value="101"/>
+    <constructor-arg value="Shourya Singh Thakur"/>
+</bean>
 
 </beans>
